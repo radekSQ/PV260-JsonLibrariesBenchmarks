@@ -1,0 +1,26 @@
+﻿{
+	"total": 3,
+	"result": [
+		{
+			"category": [ "test_category" ],
+			"icon_url": "nothing interesting",
+			"id": "1",
+			"url": "1.html",
+			"value": "Whatever doesnt matter."
+		},
+		{
+			"category": [ "test_category2" ],
+			"icon_url": "nothing",
+			"id": "2",
+			"url": "2.html",
+			"value": "OK."
+		},
+		{
+			"category": [ "test_category3" ],
+			"icon_url": "interesting",
+			"id": "3",
+			"url": "3.html",
+			"value": "CCC."
+		}
+	]
+}

@@ -3,20 +3,19 @@ using BenchmarkDotNet.Attributes.Columns;
 using BenchmarkDotNet.Attributes.Exporters;
 using BenchmarkDotNet.Attributes.Jobs;
 using JsonBenchmark.TestDTOs;
-using Newtonsoft.Json;
+using fastJSON;
 
 namespace JsonBenchmark
 {
     [ClrJob(isBaseline: true)]
     [RPlotExporter, RankColumn]
     [HtmlExporter]
-    public class JsonDeserializersBenchmarks : JsonBenchmarkBase
+    public class FastJsonSerialize : JsonBenchmarkBase
     {
         [Benchmark]
-        public Root NewtonsoftJson_Deserialize()
+        public string fastJSON_Serialize()
         {
-            JsonSampleRoot = JsonConvert.DeserializeObject<Root>(JsonSampleString);
-            return JsonSampleRoot;
+            return JSON.ToJSON(JsonSampleRoot);
         }
     }
 }

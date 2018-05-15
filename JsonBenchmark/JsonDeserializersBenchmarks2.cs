@@ -10,13 +10,12 @@ namespace JsonBenchmark
     [ClrJob(isBaseline: true)]
     [RPlotExporter, RankColumn]
     [HtmlExporter]
-    public class JsonDeserializersBenchmarks : JsonBenchmarkBase
+    public class JsonDeserializersBenchmarks2 : JsonBenchmarkBase
     {
         [Benchmark]
-        public Root NewtonsoftJson_Deserialize()
+        public Root NewtonsoftJson_Deserialize2()
         {
-            JsonSampleRoot = JsonConvert.DeserializeObject<Root>(JsonSampleString);
-            return JsonSampleRoot;
+            return JsonConvert.DeserializeObject<Root>(JsonSampleString2);
         }
     }
 }
